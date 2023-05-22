@@ -4,15 +4,21 @@ Source code for the stability analysis of a spherical shell composed of a dielec
 ## Dependencies
 
 The code is written in Python 3 and tested with version 3.10. The following additional libraries are required, in the parentheses we indicate the version used in the simulations reported in the paper:
-* FEniCS (version 2019.2.0)
-* Numpy (version 1.17.4)
-* Scipy (version 1.3.3)
+* FEniCS
+* Numpy
+* Scipy
+* gmsh
 
 ## Repository structure
 
 The repository is organized as follows:
 * `spherical_de.py` contains the main class which contains all the information about the numerical problem.
 * `fixed_potential.py` performs first a ramp to increase the voltage and then applies an arclength continuation to investigate the buckling induced by an applied pression.
+* `mesh.geo` is a file containing the geometrical parameters of the mesh. Use gmsh and the tool `dolfin-convert` to generate the file `mesh.xml` used by FEniCS to import the mesh.
+```
+gmsh -2 -format msh2 mesh.geo
+dolfin-convert mesh.msh mesh.xml
+```
 
 ## Citing
 
