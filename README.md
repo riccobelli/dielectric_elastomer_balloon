@@ -4,10 +4,11 @@ Source code for the stability analysis of a spherical shell composed of a dielec
 ## Dependencies
 
 The code is written in Python 3 and tested with version 3.10. The following additional libraries are required, in the parentheses we indicate the version used in the simulations reported in the paper:
-* FEniCS
-* Numpy
-* Scipy
-* gmsh
+* FEniCS (https://fenicsproject.org/)
+* Numpy (https://numpy.org/)
+* Scipy (https://scipy.org/)
+* gmsh (https://gmsh.info/)
+* BiFEniCS (https://github.com/riccobelli/bifenics)
 
 ## Repository structure
 
